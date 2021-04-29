@@ -5,11 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularios</title>
+    <style>
+        input {
+  border: 2px solid currentcolor;
+}
+input:invalid {
+  border: 2px dashed rgb(114, 60, 60);
+}
+input:invalid:focus {
+  background-image: linear-gradient(pink, lightgreen);
+}
+    </style>
 </head>
 <body>
     <h1>Formularios</h1>
    <form>
-       <input type="text">
+       <label for="email">Gmail</label>
+       <input type="email" placeholder="Introduce email" id="email" maxlength="30" required>
+       <br><br>
+       <label for="password">Contraseña</label>
+       <input type="password" id="password" placeholder="Contraseña" required>
+       <br><br>
+       <label for="fecha">Fecha de nacimiento</label>
+       <input type="date" id="fecha" required>
+       <br><br>
+       <label for="number">Numero</label>
+       <input type="number" id="number" minlength="10" required>
+       <h3>Selecciona tu pais</h3>
+       <select>
+           <option selected>Selecciona</option>
+           <option>Mexico</option>
+           <option>Argentina</option>
+           <option>Brasil</option>
+       </select>
+       <h3>Escoge tu turno</h3>
+           <label>
+               <input type="radio" name="turno"> Matutino
+           </label><br>
+           <label>
+               <input type="radio" name="turno"> Vespertino
+           </label>
+        <h3>Acepta terminos y condiciones</h3>
+        <label>
+            <input type="checkbox" required >Acepto terminos y condiciones
+        </label>
+        <br><br>
+        <h3>Agruega comentarios</h3>
+        <textarea cols="30" rows="10"></textarea>
+        <br><br>
+       <input type="reset" value="Recetiar">
+       <input type="submit" value="Enviar">
+
    </form>
 </body>
 </html>
